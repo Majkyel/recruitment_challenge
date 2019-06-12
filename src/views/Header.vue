@@ -1,16 +1,19 @@
 <template>
-<div class="navigation__container container">
-  <div id="nav" class="navigation__content">
-    <div class="navigation__logo">
-      <a class="logo__link" href="/"><Logo width="150px" height="100px" /></a>
-    </div>
-    <div class="navigation__links">
-      <router-link class="navigation__link link" to="/">Home</router-link>
-      <router-link class="navigation__link link" to="/status">Status</router-link>
-    </div>
-    <div class="hamburger__menu">
-      <router-link class="hamburger__link link" to="/">Home</router-link>
-      <router-link class="hamburger__link link" to="/status">Status</router-link>
+<div class="header">
+  <div class="navigation__container container">
+    <div id="nav" class="navigation__content">
+      <div class="navigation__logo">
+        <a class="logo__link" href="/">
+          <Logo width="150px" height="100px" /></a>
+      </div>
+      <div class="navigation__links">
+        <router-link class="navigation__link link" to="/">Home</router-link>
+        <router-link class="navigation__link link" to="/status">Status</router-link>
+      </div>
+      <div class="hamburger__menu">
+        <router-link class="hamburger__link link" to="/">Home</router-link>
+        <router-link class="hamburger__link link" to="/status">Status</router-link>
+      </div>
     </div>
   </div>
 </div>
@@ -46,8 +49,8 @@ export default {
             display: block;
             align-self: center;
             .navigation__link {
-              margin: 0 15px;
-              padding: 2px;
+                margin: 0 15px;
+                padding: 2px;
             }
         }
         .hamburger__menu {
