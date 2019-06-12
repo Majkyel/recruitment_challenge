@@ -1,5 +1,5 @@
 <template>
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="1000.000000pt" height="572.000000pt" viewBox="0 0 1200.000000 572.000000" preserveAspectRatio="xMidYMid meet">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="logo__image" width="1000.000000pt" height="572.000000pt" viewBox="0 0 1200.000000 572.000000" preserveAspectRatio="xMidYMid meet">
   <metadata>
     Created by potrace 1.15, written by Peter Selinger 2001-2017
   </metadata>
@@ -55,4 +55,8 @@ export default {
 }
 </script>
 
-<style lang="css" scoped></style>
+<style lang="css" scoped>
+    .logo__image {
+        vertical-align: middle;
+    }
+</style>
