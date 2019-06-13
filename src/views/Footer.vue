@@ -12,11 +12,13 @@
 
 <style lang="scss" scoped>
 .footer {
-    padding: 1px 4px;
     background-color: #000;
     .footer__container {
+        padding: 10px;
         .footer__text {
             color: white;
+            font-size: 14px;
+            margin: 0;
         }
     }
 }
