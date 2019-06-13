@@ -4,7 +4,8 @@
     <div id="nav" class="navigation__content">
       <div class="navigation__logo">
         <a class="logo__link" href="/">
-          <Logo width="150px" height="100px" /></a>
+          <Logo width="150px" height="100px" />
+        </a>
       </div>
       <div class="navigation__links">
         <router-link class="navigation__link link" to="/">Home</router-link>
@@ -30,31 +31,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.navigation__container {
-    .navigation__content {
-        padding: 0 30px;
-        display: flex;
-        justify-content: space-between;
-        .link {
-            font-weight: bold;
-            color: #2c3e50;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            &.router-link-exact-active {
-                color: #42b983;
+.header {
+    height: 100px;
+    .navigation__container {
+        .navigation__content {
+            padding: 0 30px;
+            display: flex;
+            justify-content: space-between;
+            .link {
+                font-weight: bold;
+                color: #2c3e50;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: bold;
+                &.router-link-exact-active {
+                    color: #42b983;
+                }
             }
-        }
-        .navigation__links {
-            display: block;
-            align-self: center;
-            .navigation__link {
-                margin: 0 15px;
-                padding: 2px;
+            .navigation__links {
+                display: block;
+                align-self: center;
+                .navigation__link {
+                    margin: 0 15px;
+                    padding: 2px;
+                    letter-spacing: 2px;
+                    font-weight: 900;
+                }
             }
-        }
-        .hamburger__menu {
-            display: none;
+            .hamburger__menu {
+                display: none;
+            }
         }
     }
 }
