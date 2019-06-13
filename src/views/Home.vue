@@ -1,14 +1,19 @@
 <template>
-  <div class="home">
-
-  </div>
+<div class="home">
+  <heroHeader />
+  <pageInformation />
+</div>
 </template>
 
 <script>
+import heroHeader from '@/components/home/homeHeroHeader.vue';
+import pageInformation from '@/components/home/homePageInformation.vue';
 
 export default {
   name: 'home',
   components: {
+    heroHeader,
+    pageInformation
   },
 };
 </script>
