@@ -47,11 +47,11 @@ export default {
         .pageInformation__content {
             padding: 10px;
             .pageInformation__text {
-                text-indent: -12px;
+                text-indent: -7px;
                 text-align: justify;
                 word-break: break-word;
                 margin: 10px;
-                font-size: 19px;
+                font-size: 16px;
                 letter-spacing: 1px;
             }
         }
