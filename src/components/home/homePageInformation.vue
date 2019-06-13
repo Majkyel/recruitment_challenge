@@ -9,7 +9,7 @@
         fringilla urna. Etiam tristique, arcu ac feugiat dictum.
       </p>
     </div>
-    <div class="pageInformation__content second__second">
+    <div class="pageInformation__content second__content">
       <p class="pageInformation__text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae lorem euismod, dapibus urna sit amet, viverra nunc. Fusce convallis felis quis porttitor auctor. Etiam enim massa, accumsan eu ipsum in, pellentesque egestas lorem. Nunc
         consectetur felis sit amet nibh dapibus, vitae molestie turpis lacinia. Nullam non bibendum nisi, tempus porttitor mi. Quisque nec eros vitae dui efficitur interdum. Ut pulvinar leo odio, nec pulvinar augue lacinia vel. Vivamus est erat,
@@ -17,7 +17,7 @@
         fringilla urna. Etiam tristique, arcu ac feugiat dictum.
       </p>
     </div>
-    <div class="pageInformation__content third__third">
+    <div class="pageInformation__content third__content">
       <p class="pageInformation__text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae lorem euismod, dapibus urna sit amet, viverra nunc. Fusce convallis felis quis porttitor auctor. Etiam enim massa, accumsan eu ipsum in, pellentesque egestas lorem. Nunc
         consectetur felis sit amet nibh dapibus, vitae molestie turpis lacinia. Nullam non bibendum nisi, tempus porttitor mi. Quisque nec eros vitae dui efficitur interdum. Ut pulvinar leo odio, nec pulvinar augue lacinia vel. Vivamus est erat,
