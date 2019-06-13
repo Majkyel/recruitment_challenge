@@ -1,11 +1,17 @@
 <template>
-  <div class="status">
-    <h1>This is an about page</h1>
-  </div>
+<div class="status">
+  <machinesPower />
+</div>
 </template>
 
 <script>
+import machinesPower from '@/components/status/machinesPowerInformation.vue';
 
+export default {
+  components: {
+    machinesPower,
+  }
+}
 </script>
 
 <style lang="scss" scoped>
