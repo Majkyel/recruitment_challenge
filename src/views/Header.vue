@@ -44,8 +44,13 @@ export default {
                 text-decoration: none;
                 text-transform: uppercase;
                 font-weight: bold;
+                border-bottom: 1.5px solid white;
+                transition: border-bottom 1s;
+                &:hover {
+                    border-bottom: 1.5px solid black;
+                }
                 &.router-link-exact-active {
-                    color: #42b983;
+                    border-bottom: 1.5px solid black;
                 }
             }
             .navigation__links {
