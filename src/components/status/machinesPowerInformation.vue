@@ -1,6 +1,16 @@
 <template>
 <div class="machinesPower">
-  <h1>This is an about page</h1>
+  <div class="machinesPower__container container">
+    <h2 class="machinesPower__title">TOTAL POWER: xxx</h2>
+    <div class="machinesPower__content">
+      <div class="machinesPower--consumption first-content">
+
+      </div>
+      <div class="machinesPower--consumption second-content">
+
+      </div>
+    </div>
+  </div>
 </div>
 </template>
 
