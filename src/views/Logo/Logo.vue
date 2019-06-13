@@ -48,7 +48,7 @@ l-39 -39 -271 0 -271 0 0 133 c0 74 3 137 7 140 11 12 465 8 508 -4z" />
   </g>
 </svg>
 </template>
-
+ 
 <script>
 export default {
   name: 'Logo'
