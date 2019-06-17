@@ -38,7 +38,6 @@ export default {
 <style lang="scss" scoped>
 .machinesPower {
     .machinesPower__container {
-        padding: 100px 0;
         .machinesPower__title {}
         .machinesPower__content {
             display: flex;
