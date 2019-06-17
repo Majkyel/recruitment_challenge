@@ -14,7 +14,7 @@ export default {
 
 <style lang="scss" scoped>
 .heroHeader {
-    background-image: url("../../public/images/hero_header.jpeg");
+    background-image: url("../../../public/images/hero_header.jpeg");
     height: calc(100vh - 100px);
     background-size: cover;
     background-repeat: no-repeat;
