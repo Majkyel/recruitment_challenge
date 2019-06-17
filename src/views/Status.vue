@@ -1,22 +1,24 @@
 <template>
 <div class="status">
-  <heroHeader />
   <machinesPower />
 </div>
 </template>
 
 <script>
-import heroHeader from '@/components/heroHeader.vue';
 import machinesPower from '@/components/status/machinesPowerInformation.vue';
 
 export default {
   components: {
-    heroHeader,
     machinesPower
   }
 }
 </script>
 
 <style lang="scss" scoped>
-
+.status {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 </style>

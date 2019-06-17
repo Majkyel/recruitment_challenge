@@ -34,6 +34,7 @@ export default {
 .header {
     height: 100px;
     .navigation__container {
+        border-bottom: 1px solid black;
         .navigation__content {
             padding: 0 30px;
             display: flex;

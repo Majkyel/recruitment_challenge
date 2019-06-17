@@ -13,6 +13,7 @@
 <style lang="scss" scoped>
 .footer {
     background-color: #000;
+    height: 40px;
     .footer__container {
         padding: 10px;
         .footer__text {
