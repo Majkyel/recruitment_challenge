@@ -14,11 +14,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.status {
-  min-height: calc(100vh - 140px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-</style>
+<style lang="scss" scoped></style>
