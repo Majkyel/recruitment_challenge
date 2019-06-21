@@ -1,9 +1,10 @@
 <template>
 <div id="app" class="app">
   <Header />
-  <transition  name="fade" mode="out-in">
-      <router-view />
+  <transition name="fade" mode="out-in">
+    <router-view />
   </transition>
+  <div class="app__arrow--up" @click="clickGoUp(scrollTopSpeed)"></div>
   <Footer />
 </div>
 </template>
@@ -13,9 +14,31 @@ import Header from './views/Header.vue';
 import Footer from './views/Footer.vue';
 
 export default {
+  data: function() {
+    return {
+      scrollTopSpeed: 800
+    }
+  },
   components: {
     Header,
     Footer
+  },
+  methods: {
+    clickGoUp: function(scrollDuration) {
+      let scrollStep = -window.scrollY / (scrollDuration / 15),
+        scrollInterval = setInterval(function() {
+          if (window.scrollY != 0) {
+            window.scrollBy(0, scrollStep);
+          } else clearInterval(scrollInterval);
+        }, 15);
+    }
+  },
+  created: function() {
+    window.addEventListener("scroll", function(event) {
+      let scroll = this.scrollY;
+      let arrowUpButton = document.querySelector('.app__arrow--up');
+      (scroll > 150) ? arrowUpButton.style.display = 'block': arrowUpButton.style.display = 'none';
+    });
   }
 }
 </script>
@@ -23,14 +46,14 @@ export default {
 <style lang="scss">
 .fade-enter-active,
 .fade-leave-active {
-  transition-duration: 0.3s;
-  transition-property: opacity;
-  transition-timing-function: ease;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+    transition-timing-function: ease;
 }
 
 .fade-enter,
 .fade-leave-active {
-  opacity: 0
+    opacity: 0;
 }
 
 body {
@@ -44,6 +67,23 @@ body {
     color: #2c3e50;
     min-height: 100vh;
     overflow: hidden;
+    .app__arrow--up {
+        position: fixed;
+        padding: 1vh 1.5vh;
+        background: gray;
+        color: black;
+        bottom: 70px;
+        right: 40px;
+        display: none;
+        cursor: pointer;
+        border-radius: 7px;
+        border: 1.2px solid black;
+        box-shadow: 1px 1px 5px black;
+        &::after {
+          content: '⇧';
+          font-size: 1.6em;
+        }
+    }
 }
 .container {
     max-width: 1366px;
