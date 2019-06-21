@@ -40,7 +40,15 @@ export default {
                 margin: 10px;
                 font-size: 16px;
                 letter-spacing: 1px;
+                font-style: italic;
+                text-shadow: 1px 1px 4px lightgray;
             }
+        }
+        .first__content,.second__content {
+            border-right: 1px solid lightgray;
+        }
+        .third__content {
+            border: none;
         }
     }
 }
