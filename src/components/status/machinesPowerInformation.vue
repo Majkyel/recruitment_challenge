@@ -72,6 +72,7 @@ export default {
             justify-content: space-around;
             margin: 50px 0;
             .machinesPower__content--consumption {
+                cursor: pointer;
                 .machinesPower__image {
                     height: 300px;
                     width: 300px;
@@ -108,6 +109,42 @@ export default {
             }
             .first-content {}
             .second-content {}
+        }
+    }
+}
+@media screen and (max-width: 680px) {
+    .machinesPower__content {
+        display: block!important;
+        .machinesPower__image {
+            margin: auto!important;
+        }
+    }
+}
+@media screen and (max-width: 420px) {
+    .machinesPower__container {
+        margin: 14vh auto!important;
+        .machinesPower__content {
+            .machinesPower__content--consumption {
+                margin-bottom: 35px!important;
+                .machinesPower__image {
+                    height: 220px!important;
+                    width: 220px!important;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 360px) {
+    .machinesPower__container {
+        margin: 10vh auto!important;
+        .machinesPower__content {
+            .machinesPower__content--consumption {
+                margin-bottom: 35px!important;
+                .machinesPower__image {
+                    height: 200px!important;
+                    width: 200px!important;
+                }
+            }
         }
     }
 }

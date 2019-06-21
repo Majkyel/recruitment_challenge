@@ -52,10 +52,12 @@ export default {
         }
     }
 }
-
 @media screen and (max-width: 680px) {
     .pageInformation__container {
         display: block!important;
+        .first__content,.second__content {
+            border: none!important;
+        }
     }
 }
 </style>
