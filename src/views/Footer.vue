@@ -14,6 +14,7 @@
 .footer {
     background-color: #000;
     height: 40px;
+    box-shadow: 0px -1px 10px black;
     .footer__container {
         padding: 10px;
         .footer__text {
