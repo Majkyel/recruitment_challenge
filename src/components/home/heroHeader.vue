@@ -19,7 +19,7 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
-    box-shadow: 0px 3px 10px black;
+    box-shadow: 0px 5px 5px gray;
     .heroHeader__container {
         .heroHeader__title {
             text-transform: uppercase;
