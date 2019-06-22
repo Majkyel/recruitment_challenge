@@ -1,7 +1,7 @@
 <template>
 <div class="machinesPower">
   <div class="machinesPower__container container">
-    <h2 class="machinesPower__title">TOTAL POWER: {{totalPower}} kW</h2>
+    <h2 class="machinesPower__title" :class="[{titlePowerActive:mileniumIsActive},{titlePowerActive:lightsaberIsActive}]">TOTAL POWER: {{totalPower}} kW</h2>
     <div class="machinesPower__content">
       <div class="machinesPower__content--consumption first-content" @click="powerMechanismMileniumFalcon">
         <div class="machinesPower__image" :class={isActive:mileniumIsActive}>
@@ -63,10 +63,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../scss/_variables.scss";
+
 .machinesPower {
     .machinesPower__container {
         margin: 20vh auto;
-        .machinesPower__title {}
+        .titlePowerActive {
+            text-shadow: 0 0 17px $machines-power-title-active-power-text-shadow;
+        }
         .machinesPower__content {
             display: flex;
             justify-content: space-around;
@@ -76,14 +80,13 @@ export default {
                 .machinesPower__image {
                     height: 300px;
                     width: 300px;
-                    border: 2px solid gray;
-                    box-shadow: 0 0 13px gray;
+                    border: 2px solid $machines-power-image-border;
+                    box-shadow: 0 0 13px $machines-power-image-box-shadow;
                     border-radius: 100%;
                     overflow: hidden;
                     filter: saturate(8%);
                     img {
                         display: block;
-
                         margin-left: auto;
                         margin-right: auto;
                         margin-top: 50%;
@@ -102,13 +105,11 @@ export default {
                     margin: 13px 0;
                 }
                 .isActive {
-                    border: 2px solid green;
-                    box-shadow: 0 0 13px green;
+                    border: 2px solid $machines-power-image-isActive-border;
+                    box-shadow: 0 0 13px $machines-power-image-isActive-box-shadow;
                     filter: saturate(100%);
                 }
             }
-            .first-content {}
-            .second-content {}
         }
     }
 }
@@ -116,13 +117,13 @@ export default {
     .machinesPower__content {
         display: block!important;
         .machinesPower__image {
-            margin: auto!important;
+            margin: auto!important !important;
         }
     }
 }
 @media screen and (max-width: 420px) {
     .machinesPower__container {
-        margin: 14vh auto!important;
+        margin: 14vh auto!important !important;
         .machinesPower__content {
             .machinesPower__content--consumption {
                 margin-bottom: 35px!important;
@@ -136,7 +137,7 @@ export default {
 }
 @media screen and (max-width: 360px) {
     .machinesPower__container {
-        margin: 10vh auto!important;
+        margin: 10vh auto!important !important;
         .machinesPower__content {
             .machinesPower__content--consumption {
                 margin-bottom: 35px!important;

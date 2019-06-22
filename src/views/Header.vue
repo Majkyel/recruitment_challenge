@@ -59,9 +59,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../scss/_variables.scss";
+
 .header {
     height: 100px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $header-border-bottom;
     .navigation__container {
         .navigation__content {
             padding: 0 30px;
@@ -69,17 +71,17 @@ export default {
             justify-content: space-between;
             .link {
                 font-weight: bold;
-                color: #2c3e50;
+                color: $header-link-color;
                 text-decoration: none;
                 text-transform: uppercase;
                 font-weight: bold;
-                border-bottom: 1.5px solid white;
+                border-bottom: 1.5px solid $header-link-border-bottom;
                 transition: border-bottom 1s;
                 &:hover {
-                    border-bottom: 1.5px solid black;
+                    border-bottom: 1.5px solid $header-link-border-bottom-hover;
                 }
                 &.router-link-exact-active {
-                    border-bottom: 1.5px solid black;
+                    border-bottom: 1.5px solid $header-link-border-bottom-active;
                 }
             }
             .navigation__links {
@@ -99,7 +101,7 @@ export default {
                 right: 0;
                 bottom: 0;
                 height: calc(100vh - 101px);
-                background-color: white;
+                background-color: $header-hamburger-navigation-background-color;
                 z-index: 2;
                 .hamburger__links {
                     position: relative;
@@ -109,7 +111,7 @@ export default {
                         display: block;
                         font-size: calc(2vh + 2vw);
                         margin: 10px 25px;
-                        border: 2px solid black;
+                        border: 2px solid $header-hamburger-navigation-link-border;
                         transition: none;
                     }
                 }
@@ -124,9 +126,9 @@ export default {
                     .hamburger__bar3 {
                         width: 30px;
                         height: 3px;
-                        background-color: #000;
+                        background-color: $header-hamburger-menu-bars-background-color;
                         margin: 6px 0;
-                        transition: 0.4s;
+                        transition: .4s;
                     }
                 }
             }

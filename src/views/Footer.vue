@@ -11,14 +11,16 @@
 </script>
 
 <style lang="scss" scoped>
+@import "../scss/_variables.scss";
+
 .footer {
-    background-color: #000;
+    background-color: $footer-background-color;
     height: 40px;
-    box-shadow: 0px -4px 7px gray;
+    box-shadow: 0 -4px 7px $footer-box-shadow;
     .footer__container {
         padding: 10px;
         .footer__text {
-            color: white;
+            color: $footer-text-color;
             font-size: 14px;
             margin: 0;
         }

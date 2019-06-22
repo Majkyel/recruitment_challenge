@@ -44,18 +44,18 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./scss/_variables.scss";
+
 .fade-enter-active,
 .fade-leave-active {
-    transition-duration: 0.3s;
+    transition-duration: .3s;
     transition-property: opacity;
     transition-timing-function: ease;
 }
-
 .fade-enter,
 .fade-leave-active {
     opacity: 0;
 }
-
 body {
     margin: 0;
 }
@@ -64,25 +64,25 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
+    color: $app-font-color;
     min-height: 100vh;
     overflow: hidden;
     .app__arrow--up {
         position: fixed;
         padding: 1vh 1.5vh;
-        background: gray;
-        color: black;
+        background: $app-arrow-up-background;
+        color: $app-arrow-up-color;
         bottom: 70px;
         right: 40px;
         display: none;
         cursor: pointer;
         border-radius: 7px;
-        border: 1.2px solid black;
-        box-shadow: 1px 1px 5px black;
+        border: 1.2px solid $app-arrow-up-border;
+        box-shadow: 1px 1px 5px $app-arrow-up-box-shadow;
         &::after {
-          content: '⇧';
-          font-size: 1.6em;
-          -webkit-text-fill-color: white;
+            content: '⇧';
+            font-size: 1.6em;
+            -webkit-text-fill-color: $app-arrow-up-fill;
         }
     }
 }

@@ -13,22 +13,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../../scss/_variables.scss";
+
 .heroHeader {
     background-image: url("../../../public/images/hero_header.jpeg");
     height: calc(100vh - 100px);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
-    box-shadow: 0px 5px 5px gray;
+    box-shadow: 0 5px 5px $hero-header-box-shadow;
     .heroHeader__container {
         .heroHeader__title {
             text-transform: uppercase;
             font-size: calc(3vw + 3vh);
-            text-shadow: 0 0 5px yellow;
-            color: black;
+            text-shadow: 0 0 5px $hero-header-title-text-shadow;
+            color: $hero-header-title-color;
             font-weight: 900;
             letter-spacing: 5px;
-            opacity: 0.5;
+            opacity: .5;
             animation-name: titleAnimation;
             animation-duration: 4s;
         }
@@ -39,7 +41,7 @@ export default {
         opacity: 0;
     }
     to {
-        opacity: 0.5;
+        opacity: .5;
     }
 }
 </style>
