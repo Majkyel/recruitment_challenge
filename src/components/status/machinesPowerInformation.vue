@@ -1,16 +1,16 @@
 <template>
 <div class="machinesPower">
   <div class="machinesPower__container container">
-    <h2 class="machinesPower__title" :class="[{titlePowerActive:mileniumIsActive},{titlePowerActive:lightsaberIsActive}]">TOTAL POWER: {{totalPower}} kW</h2>
+    <h2 class="machinesPower__title">TOTAL POWER: {{totalPower}} kW</h2>
     <div class="machinesPower__content">
-      <div class="machinesPower__content--consumption first-content" @click="powerMechanismMileniumFalcon">
-        <div class="machinesPower__image" :class={isActive:mileniumIsActive}>
+      <div class="machinesPower__content--consumption first-content">
+        <div class="machinesPower__image">
           <img class="image__first" src="../../../public/images/falcon.jpg" alt="Milenium Falcon">
         </div>
         <div class="machinesPower--consumption">{{mileniumFalconPower}} kW</div>
       </div>
-      <div class="machinesPower__content--consumption second-content" @click="powerMechanismLightsaber">
-        <div class="machinesPower__image" :class={isActive:lightsaberIsActive}>
+      <div class="machinesPower__content--consumption second-content">
+        <div class="machinesPower__image">
           <img class="image__second" src="../../../public/images/lightsaber.png" alt="Lightsaber">
         </div>
         <div class="machinesPower--consumption">{{lightsaberPower}} kW</div>
@@ -25,39 +25,37 @@ export default {
   name: 'machinesPower',
   data: function() {
     return {
+      interval: null,
       totalPower: 0,
       mileniumFalconPower: 0,
-      lightsaberPower: 0,
-      mileniumIsActive: false,
-      lightsaberIsActive: false
+      lightsaberPower: 0
     }
   },
   methods: {
-    powerMechanismMileniumFalcon: function() {
-      this.mileniumIsActive = !this.mileniumIsActive;
-      if (this.mileniumIsActive === true) {
-        let random = Math.floor(Math.random() * 8) + 1;
-        this.mileniumFalconPower = random;
-        this.totalPowerMechanism();
-      } else {
-        this.mileniumFalconPower = 0;
-        this.totalPowerMechanism();
-      }
-    },
-    powerMechanismLightsaber: function() {
-      this.lightsaberIsActive = !this.lightsaberIsActive;
-      if (this.lightsaberIsActive === true) {
-        let random = Math.floor(Math.random() * 8) + 1;
-        this.lightsaberPower = random;
-        this.totalPowerMechanism();
-      } else {
-        this.lightsaberPower = 0;
-        this.totalPowerMechanism();
-      }
+    loadData: function() {
+      fetch("https://challenge.codetain.com/api/v1/charging_status")
+        .then(response => response.json())
+        .then(data => {
+          this.mileniumFalconPower = data.charging_status.falcon;
+          this.lightsaberPower = data.charging_status.lightsaber;
+          this.totalPowerMechanism();
+        });
     },
     totalPowerMechanism: function() {
       this.totalPower = this.mileniumFalconPower + this.lightsaberPower;
     }
+  },
+  created: function() {
+    this.loadData();
+    this.interval = setInterval(
+      function() {
+        this.loadData();
+      }.bind(this),
+      10000
+    );
+  },
+  beforeDestroy: function() {
+    clearInterval(this.interval);
   }
 };
 </script>
