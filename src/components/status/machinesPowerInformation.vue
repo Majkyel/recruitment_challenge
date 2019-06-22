@@ -68,6 +68,9 @@ export default {
 .machinesPower {
     .machinesPower__container {
         margin: 20vh auto;
+        .machinesPower__title {
+            text-shadow: 0px 0px 29px $machines-power-title-power-text-shadow;
+        }
         .titlePowerActive {
             text-shadow: 0 0 17px $machines-power-title-active-power-text-shadow;
         }
@@ -102,7 +105,9 @@ export default {
                 .machinesPower--consumption {
                     color: black;
                     font-size: 24px;
-                    margin: 13px 0;
+                    margin: 18px 15px;
+                    border: 2px solid $machines-power-consumption-border;
+                    border-radius: 20px;
                 }
                 .isActive {
                     border: 2px solid $machines-power-image-isActive-border;
@@ -117,13 +122,13 @@ export default {
     .machinesPower__content {
         display: block!important;
         .machinesPower__image {
-            margin: auto!important !important;
+            margin: auto!important;
         }
     }
 }
 @media screen and (max-width: 420px) {
     .machinesPower__container {
-        margin: 14vh auto!important !important;
+        margin: 14vh auto!important;
         .machinesPower__content {
             .machinesPower__content--consumption {
                 margin-bottom: 35px!important;
@@ -137,7 +142,7 @@ export default {
 }
 @media screen and (max-width: 360px) {
     .machinesPower__container {
-        margin: 10vh auto!important !important;
+        margin: 10vh auto!important;
         .machinesPower__content {
             .machinesPower__content--consumption {
                 margin-bottom: 35px!important;
