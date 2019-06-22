@@ -1,6 +1,22 @@
-# recruitment_challenge
+# RECRUITMENT_CHALLENGE
 
-## Project setup
+I created recruitment task star wars application in Vue.js technology.
+
+## SOURCE
+
+To created this project I used:
+1. VueJS Documentation [https://vuejs.org/v2/guide/].
+
+## TOOLS
+
+To build project I used:
+1. Vue CLI [https://cli.vuejs.org/guide/].
+
+## TECHNOLOGIES
+
+The project was created based on HTML, SCSS, JavaScript, VueJS.
+
+## PROJECT SETUP
 ```
 npm install
 ```
@@ -14,16 +30,3 @@ npm run serve
 ```
 npm run build
 ```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
