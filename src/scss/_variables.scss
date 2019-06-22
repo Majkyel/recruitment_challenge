@@ -1,0 +1,36 @@
+//App.vue
+$app-font-color: #2c3e50;
+$app-arrow-up-background: #666;
+$app-arrow-up-color: #000;
+$app-arrow-up-border: #000;
+$app-arrow-up-box-shadow: #000;
+$app-arrow-up-fill: #fff;
+//VIEWS
+//views/Footer.vue
+$footer-background-color: #000;
+$footer-box-shadow: #666;
+$footer-text-color: #fff;
+//views/Header.vue
+$header-border-bottom: #000;
+$header-link-color: #2c3e50;
+$header-link-border-bottom: #fff;
+$header-link-border-bottom-hover: #000;
+$header-link-border-bottom-active: #000;
+$header-hamburger-navigation-background-color: #fff;
+$header-hamburger-navigation-link-border: #000;
+$header-hamburger-menu-bars-background-color: #000;
+//COMPONENTS
+//components/home/heroHeader.vue
+$hero-header-box-shadow: #666;
+$hero-header-title-text-shadow: #ffff00;
+$hero-header-title-color: #000;
+//components/home/homePageInformation.vue
+$page-information-border-top: #000;
+$page-information-font-text-shadow: #D3D3D3;
+$page-information-font-border-right: #D3D3D3;
+//components/status/machinesPowerInformation.vue
+$machines-power-title-active-power-text-shadow: #ff0000;
+$machines-power-image-border: #666;
+$machines-power-image-box-shadow: #666;
+$machines-power-image-isActive-border: #008000;
+$machines-power-image-isActive-box-shadow: #008000;
