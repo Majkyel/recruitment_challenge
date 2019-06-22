@@ -103,7 +103,15 @@ export default {
                 z-index: 2;
                 .hamburger__links {
                     position: relative;
-                    top: 50%;
+                    top: 20%;
+                    transform: translateY(-50%);
+                    .navigation__link {
+                        display: block;
+                        font-size: calc(2vh + 2vw);
+                        margin: 10px 25px;
+                        border: 2px solid black;
+                        transition: none;
+                    }
                 }
             }
             .hamburger__menu {
