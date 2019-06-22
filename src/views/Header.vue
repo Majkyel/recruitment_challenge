@@ -113,6 +113,7 @@ export default {
                         margin: 10px 25px;
                         border: 2px solid $header-hamburger-navigation-link-border;
                         transition: none;
+                        border-radius: 20px;
                     }
                 }
             }
