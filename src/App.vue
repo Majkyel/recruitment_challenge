@@ -82,6 +82,7 @@ body {
         &::after {
           content: '⇧';
           font-size: 1.6em;
+          -webkit-text-fill-color: white;
         }
     }
 }
