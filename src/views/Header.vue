@@ -138,8 +138,8 @@ export default {
                 opacity: 0;
             }
             .hamburger__animation .hamburger__bar3 {
-                -webkit-transform: rotate(45deg) translate(-6px, -8px);
-                transform: rotate(45deg) translate(-6px, -8px);
+                -webkit-transform: rotate(45deg) translate(-7px, -8px);
+                transform: rotate(45deg) translate(-7px, -8px);
             }
         }
     }
