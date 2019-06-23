@@ -2,6 +2,12 @@
 
 I created recruitment task star wars application in Vue.js technology.
 
+### BRANCHES
+
+1. master -> there is basic structure application.
+2. step_one_branch -> there is step one challenge task.
+3. step_two_branch - > there is step two challenge task.
+
 ## SOURCE
 
 To created this project I used:
