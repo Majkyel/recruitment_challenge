@@ -36,7 +36,7 @@ export default {
     powerMechanismMileniumFalcon: function() {
       this.mileniumIsActive = !this.mileniumIsActive;
       if (this.mileniumIsActive === true) {
-        let random = Math.floor(Math.random() * 8) + 1;
+        let random = Math.floor(Math.random() * 7) + 1;
         this.mileniumFalconPower = random;
         this.totalPowerMechanism();
       } else {
@@ -47,7 +47,7 @@ export default {
     powerMechanismLightsaber: function() {
       this.lightsaberIsActive = !this.lightsaberIsActive;
       if (this.lightsaberIsActive === true) {
-        let random = Math.floor(Math.random() * 8) + 1;
+        let random = Math.floor(Math.random() * 7) + 1;
         this.lightsaberPower = random;
         this.totalPowerMechanism();
       } else {
