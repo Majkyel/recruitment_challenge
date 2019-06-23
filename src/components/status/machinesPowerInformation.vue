@@ -1,16 +1,16 @@
 <template>
 <div class="machinesPower">
   <div class="machinesPower__container container">
-    <h2 class="machinesPower__title">TOTAL POWER: {{totalPower}} kW</h2>
+    <h2 class="machinesPower__title" :class={titlePowerActive:titlePowerIsActive}>TOTAL POWER: {{totalPower}} kW</h2>
     <div class="machinesPower__content">
       <div class="machinesPower__content--consumption first-content">
-        <div class="machinesPower__image">
-          <img class="image__first" src="../../../public/images/falcon.jpg" alt="Milenium Falcon">
+        <div class="machinesPower__image" :class=[{isActive:falconPowerIsActive},{priorityStatus:priorityFalconPower}] @click="clickPriorityFalconPower">
+          <img class="image__first" src="../../../public/images/falcon.png" alt="Milenium Falcon">
         </div>
         <div class="machinesPower--consumption">{{mileniumFalconPower}} kW</div>
       </div>
       <div class="machinesPower__content--consumption second-content">
-        <div class="machinesPower__image">
+        <div class="machinesPower__image" :class=[{isActive:lightsaberPowerIsActive},{priorityStatus:priortyLighsaberPower}] @click="clickPriorityLighsaberPower">
           <img class="image__second" src="../../../public/images/lightsaber.png" alt="Lightsaber">
         </div>
         <div class="machinesPower--consumption">{{lightsaberPower}} kW</div>
@@ -28,12 +28,18 @@ export default {
       interval: null,
       totalPower: 0,
       mileniumFalconPower: 0,
-      lightsaberPower: 0
+      lightsaberPower: 0,
+      titlePowerIsActive: false,
+      falconPowerIsActive: false,
+      lightsaberPowerIsActive: false,
+      autoChargingStatusLink: "https://challenge.codetain.com/api/v1/charging_status",
+      priorityFalconPower: false,
+      priortyLighsaberPower: false
     }
   },
   methods: {
     loadData: function() {
-      fetch("https://challenge.codetain.com/api/v1/charging_status")
+      fetch(this.autoChargingStatusLink)
         .then(response => response.json())
         .then(data => {
           this.mileniumFalconPower = data.charging_status.falcon;
@@ -43,6 +49,29 @@ export default {
     },
     totalPowerMechanism: function() {
       this.totalPower = this.mileniumFalconPower + this.lightsaberPower;
+      (this.totalPower != 0)?this.titlePowerIsActive = true:this.titlePowerIsActive = false;
+      (this.mileniumFalconPower != 0)?this.falconPowerIsActive = true:this.falconPowerIsActive = false;
+      (this.lightsaberPower != 0)?this.lightsaberPowerIsActive = true:this.lightsaberPowerIsActive = false;
+    },
+    clickPriorityFalconPower: function() {
+      if (this.priortyLighsaberPower === false) {
+        this.priorityFalconPower = !this.priorityFalconPower;
+        if (this.priorityFalconPower) {
+            this.autoChargingStatusLink = "https://challenge.codetain.com/api/v1/charging_status?priority=falcon";
+        } else {
+            this.autoChargingStatusLink = "https://challenge.codetain.com/api/v1/charging_status";
+        }
+      }
+    },
+    clickPriorityLighsaberPower: function() {
+      if (this.priorityFalconPower === false) {
+        this.priortyLighsaberPower = !this.priortyLighsaberPower;
+        if(this.priortyLighsaberPower) {
+            this.autoChargingStatusLink = "https://challenge.codetain.com/api/v1/charging_status?priority=lightsaber";
+        } else {
+            this.autoChargingStatusLink = "https://challenge.codetain.com/api/v1/charging_status";
+        }
+      }
     }
   },
   created: function() {
@@ -101,7 +130,7 @@ export default {
                     }
                 }
                 .machinesPower--consumption {
-                    color: black;
+                    color: $machines-power-consumption-color;
                     font-size: 24px;
                     margin: 18px 15px;
                     border: 2px solid $machines-power-consumption-border;
@@ -111,6 +140,9 @@ export default {
                     border: 2px solid $machines-power-image-isActive-border;
                     box-shadow: 0 0 13px $machines-power-image-isActive-box-shadow;
                     filter: saturate(100%);
+                }
+                .priorityStatus {
+                    background-color: $machines-power-image-priorityStatus-background-color;
                 }
             }
         }
