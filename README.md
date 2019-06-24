@@ -10,7 +10,7 @@ I created recruitment task star wars application in Vue.js technology.
 
 ## SOURCE
 
-To created this project I used:
+To create this project I used:
 1. VueJS Documentation [https://vuejs.org/v2/guide/].
 
 ## TOOLS
