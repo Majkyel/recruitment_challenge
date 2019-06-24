@@ -13,11 +13,6 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home,
-    },
-    {
-      path: '/status',
-      name: 'status',
-      component: Status,
-    },
+    }
   ],
 });
