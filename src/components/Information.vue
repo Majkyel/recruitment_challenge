@@ -1,17 +1,16 @@
 <template>
 <div class="home">
-  <Information />
+  <h1 class="home__title">RECRUITMENT CHALLENGE</h1>
+  <h2 class="home__subtitle">CHECK THIS OUT!</h2>
+  <h3 class="home__branches">BRANCHES:</h3>
+  <p class="home__branch"><b>1. step_one_branch</b> >> there is step one task.</p>
+  <p class="home__branch"><b>2. step_two_branch</b> >> there is step two task.</p>
 </div>
 </template>
 
 <script>
-import Information from '@/components/Information.vue';
-
 export default {
-  name: 'home',
-  components: {
-    Information,
-  }
+  name: 'Information',
 };
 </script>
 
